@@ -107,7 +107,7 @@ with Corporate_Emission as
 ( 
 	select distinct
     	(select sum(emissions) from GreenhouseGasEmissions where fiscalyear = '2015' and category = 'Corporate emissions' group by category ) as emission_2015_Corporate,
-		(select sum(emissions)  from GreenhouseGasEmissions where fiscalyear = '2022' and category = 'Product life cycle emissions' group by category)as emission_2022_Corporate
+		(select sum(emissions)  from GreenhouseGasEmissions where fiscalyear = '2022' and category = 'Corporate emissions' group by category)as emission_2022_Corporate
 	from GreenhouseGasEmissions
 	
 ),
